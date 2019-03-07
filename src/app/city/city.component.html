@@ -1,0 +1,26 @@
+<div class="cities">
+    <div *ngFor="let city of cities" class="clickableCity"
+ [ngStyle]="getStyles(city)">
+
+    <span class="badge">{{city.id}}</span> 
+    <label class="cityname">{{city.name}}</label>
+    <span class= "weatherdetails">
+       <div>
+        <span> {{city.weather.iconid}}</span> <!--icon -->
+        <span> {{city.weather.description}} </span> <!-- desc -->
+      </div>
+      <div>
+        <span> Temperature: {{city.weather.temp}}<span>°C</span></span> <!-- temp -->
+        <span> Humidity: {{city.weather.humidity}} </span> <!-- humidity -->
+      </div>
+      <div>
+        <span> Windspeed: {{city.weather.windspeed}} </span> <!-- windspeed -->
+        <span> Clouds: {{city.weather.clouds}}</span> <!-- clouds -->
+      </div>
+    
+        
+</span> 
+    
+</div> 
+
+</div>

@@ -1,0 +1,15 @@
+import { City } from './classes/city';
+import { Weather } from './classes/weather';
+
+
+const WEATHERS: Weather[] = [
+    {id: 1, description: 'test1', windspeed: 10, temp: 10, humidity: 10, clouds: 5, iconid: '4'},
+    {id: 2, description: 'test2', windspeed: 10, temp: 10, humidity: 10, clouds: 5, iconid: '2'},
+    {id: 3, description: 'test3', windspeed: 10, temp: 10, humidity: 10, clouds: 5, iconid: '3'},
+];
+
+export const CITIES: City[] = [
+    {id: 1, name: 'Berlin', ccode: 'DE', weather: WEATHERS[0]},
+    {id: 2, name: 'Frankfurt', ccode: 'DE', weather: WEATHERS[1]},
+    {id: 3, name: 'Mulsen', ccode: 'DE', weather: WEATHERS[2]},
+];
