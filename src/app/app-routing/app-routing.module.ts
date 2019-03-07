@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CityComponent } from '../city/city.component';
+import { FavoritesComponent } from '../favorites/favorites.component'
 import { SearchComponent } from '../search/search.component';
 
 
 const routes: Routes = [
      {path: '', redirectTo: '/favorites', pathMatch: 'full' }, // Start
-     {path: 'favorites', component: CityComponent },
+     {path: 'favorites', component: FavoritesComponent },
      {path: 'search', component: SearchComponent },
 ];
 
