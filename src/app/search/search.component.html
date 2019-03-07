@@ -1,6 +1,16 @@
 <div class="search">
-    <input #searchBox placeholder="Search a City" id="searchBox"/>
+    <mat-form-field class="searchForm" appearance="outline" (keyup.enter)="findCity()" >
+          <mat-label>Search a City</mat-label>
+  <input matInput class="searchBox" type="text" placeholder="Search a City" [(ngModel)]="searchedCity">
+  <button mat-button class="clearButton" *ngIf="searchedCity" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+    <mat-icon class="clearSearch">close</mat-icon>
+  </button>
+  <button type="submit" hidden="true" (click)="findCity()"></button>
+</mat-form-field>
 </div>
 
-<button mat-raised-button color="accent">Click me!</button>
+<div *ngIf="foundCity" class="searchResult">
+    <app-city [city]="foundCity"></app-city>
+</div>
+
 

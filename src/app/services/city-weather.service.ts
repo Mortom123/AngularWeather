@@ -14,4 +14,8 @@ export class CityWeatherService {
   getCities(): Observable<City[]>  {
       return of(CITIES);
   }
+
+  findCity(searchedCity: string): Observable<City> {
+      return of(CITIES.find(x => x.name.toLowerCase === searchedCity.toLowerCase));
+  }
 }
