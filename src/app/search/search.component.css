@@ -1,0 +1,12 @@
+#searchBox {
+    font-family: Arial;
+    font-size: 30px;
+    height: 40px;
+    width: 500px;
+}
+
+.search {
+    margin-top: 40px;
+    text-align: center;
+}
+

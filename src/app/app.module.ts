@@ -9,6 +9,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { SearchComponent } from './search/search.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from './material/material.module';
+
 
 
 
@@ -23,6 +26,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
