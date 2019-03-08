@@ -5,27 +5,24 @@
 .clickableCity {
     cursor: pointer;
     padding-left: 40px;
-    padding-top: 30px;
-    padding-bottom: 60px;
     background-repeat: no-repeat;
     background-size: cover;
+    vertical-align: middle;
+    height: 220px;
+    color: #f4df42;
 }
 
-.clickableCity:hover > *{
-    color: #98ff3d !important;
-}
 
 .cityname {
-    color: #ff603d ;
+    position: relative;
     font-size: 55px;
+    top: 40%;
 }
 
 .weatherdetails {
-    margin-top: -20px;
-    margin-right: 200px;
-    color: #ff603d;
-    float: right;
+    position: relative;
     font-size: 30px;
+    margin-left: 37%;
 
 }
 
@@ -38,3 +35,19 @@
     text-align: center;
     margin-right: 10px;
 }
+
+.favoriteButton {
+    position: relative;
+    text-align: center;
+    margin-left: 85%;
+    bottom: 40%;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite  {
+    transform: scale(2);
+}
+
+

@@ -11,11 +11,11 @@ export class CityWeatherService {
 
   constructor() { }
 
-  getCities(): Observable<City[]>  {
-      return of(CITIES);
+  getFavorites(): Observable<City[]>  {
+      return of(CITIES.filter(x => x.favorite === true));
   }
 
   findCity(searchedCity: string): Observable<City> {
-    return of(CITIES.find(x => x.name === searchedCity));
+    return of(CITIES.find(x => x.name.toUpperCase() === searchedCity.toUpperCase()));
   }
 }

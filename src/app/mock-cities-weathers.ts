@@ -9,7 +9,7 @@ const WEATHERS: Weather[] = [
 ];
 
 export const CITIES: City[] = [
-    {id: 1, name: 'Berlin', ccode: 'DE', weather: WEATHERS[0]},
-    {id: 2, name: 'Frankfurt', ccode: 'DE', weather: WEATHERS[1]},
-    {id: 3, name: 'Mulsen', ccode: 'DE', weather: WEATHERS[2]},
+    new City(1, 'Berlin', 'DE', WEATHERS[0]),
+    new City(2, 'Frankfurt', 'DE', WEATHERS[1]),
+    new City(3, 'Mulsen', 'DE', WEATHERS[2]),
 ];

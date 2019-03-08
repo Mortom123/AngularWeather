@@ -4,4 +4,8 @@ body {
     margin: 0px !important;
 }
 
+mat-icon {
+      font-family: 'Material Icons' !important;
+}
+
 

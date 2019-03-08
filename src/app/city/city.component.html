@@ -1,25 +1,29 @@
-<div class="clickableCity"
- [ngStyle]="getStyles()">
+<div class="clickableCity" [ngStyle]="getStyles()">
 
-    <span class="badge">{{city.id}}</span> 
-    <label class="cityname">{{city.name}}</label>
-    <span class= "weatherdetails">
-       <div>
-        <span> {{city.weather.iconid}}</span> <!--icon -->
-        <span> {{city.weather.description}} </span> <!-- desc -->
-      </div>
-      <div>
-        <span> Temperature: {{city.weather.temp}}<span>°C</span></span> <!-- temp -->
-        <span> Humidity: {{city.weather.humidity}} </span> <!-- humidity -->
-      </div>
-      <div>
-        <span> Windspeed: {{city.weather.windspeed}} </span> <!-- windspeed -->
-        <span> Clouds: {{city.weather.clouds}}</span> <!-- clouds -->
-      </div>
-    
-        
-</span> 
-    
-</div> 
+    <span class="cityname">
+        {{city.id}} {{city.name}}
+    </span>
 
+    <span class="weatherdetails">
+        <div>
+            <span> {{city.weather.iconid}}</span> <!--icon -->
+            <span> {{city.weather.description}} </span> <!-- desc -->
+        </div>
+        <div>
+            <span> Temperature: {{city.weather.temp}}<span>°C</span></span> <!-- temp -->
+            <span> Humidity: {{city.weather.humidity}} </span> <!-- humidity -->
+        </div>
+        <div>
+            <span> Windspeed: {{city.weather.windspeed}} </span> <!-- windspeed -->
+            <span> Clouds: {{city.weather.clouds}}</span> <!-- clouds -->
+        </div>
+
+    </span>
+    <span class="favoriteButton">
+        <button mat-icon-button class="favorite" (click)="switchFavorite()" [ngStyle]="getButtonStyle()"> 
+          <mat-icon class="material-icons" id="heartIcon">favorite</mat-icon>   
+        </button>
+    </span>
+
+</div>
 
