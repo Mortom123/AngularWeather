@@ -13,6 +13,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material/material.module';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -30,6 +32,7 @@ import {MaterialModule} from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
