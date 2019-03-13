@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FavoritesComponent } from '../favorites/favorites.component';
-import { SearchComponent, SnackBarComponent } from '../search/search.component';
+import { SearchComponent } from '../search/search.component';
 
 
 

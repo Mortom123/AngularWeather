@@ -39,24 +39,10 @@ export class SearchComponent implements OnInit {
     }
 
     openSnackBar() {
-        this.snackBar.openFromComponent(SnackBarComponent, {
-            duration: 500
+        this.snackBar.open('Sorry, the city couldn\'t be found', 'Close' , {
+            duration: 3000
         });
     }
 
 }
 
-@Component({
-  selector: 'app-snack-bar-component',
-  templateUrl: 'snack-bar-component.html',
- // styleUrls: ['../material/materialComponents.css'],
-    styles: [`
-    .example-pizza-party {
-      color: hotpink;
-    }
-  `],
-})
-export class SnackBarComponent {
-  constructor() {}
-
-}
