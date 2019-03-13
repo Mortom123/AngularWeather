@@ -1,4 +1,4 @@
-<div *ngFor="let city of cities">
+<div *ngFor="let city of cities | async">
         <app-city [city]="city"></app-city>
         <div class="favoriteCities"></div>
 </div>

@@ -3,13 +3,12 @@
 }
 
 .clickableCity {
-    cursor: pointer;
     padding-left: 40px;
     background-repeat: no-repeat;
     background-size: cover;
     vertical-align: middle;
     height: 220px;
-    color: #f4df42;
+    color: #ffb05b;
 }
 
 
@@ -20,6 +19,7 @@
 }
 
 .weatherdetails {
+    top: -15%;
     position: relative;
     font-size: 30px;
     margin-left: 37%;
@@ -40,7 +40,7 @@
     position: relative;
     text-align: center;
     margin-left: 85%;
-    bottom: 40%;
+    bottom: 52%;
     display: flex;   
     align-items: center;
     justify-content: center;

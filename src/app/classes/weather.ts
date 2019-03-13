@@ -6,4 +6,5 @@ export class Weather {
     humidity: number;
     clouds: number;
     iconid: string;
+    background: string;
 }

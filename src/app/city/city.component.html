@@ -1,26 +1,27 @@
-<div class="clickableCity" [ngStyle]="getStyles()">
+
+<div class="clickableCity" [ngStyle]="getStyles()" *ngIf="city">
 
     <span class="cityname">
-        {{city.id}} {{city.name}}
+         {{city.name }}
     </span>
 
     <span class="weatherdetails">
         <div>
-            <span> {{city.weather.iconid}}</span> <!--icon -->
-            <span> {{city.weather.description}} </span> <!-- desc -->
+            <span> <img src= "{{ getIcon() }}" size="70%" ></span> <!--icon -->
+            <span style="padding-left: 10px"> {{city.weather.description }} </span> <!-- desc -->
         </div>
         <div>
-            <span> Temperature: {{city.weather.temp}}<span>°C</span></span> <!-- temp -->
-            <span> Humidity: {{city.weather.humidity}} </span> <!-- humidity -->
+            <span> Temperature: {{city.weather.temp  }} <span>°C</span></span> <!-- temp -->
+            <span> Humidity: {{city.weather.humidity}} <span>%</span></span> <!-- humidity -->
         </div>
         <div>
-            <span> Windspeed: {{city.weather.windspeed}} </span> <!-- windspeed -->
-            <span> Clouds: {{city.weather.clouds}}</span> <!-- clouds -->
+            <span> Windspeed: {{city.weather.windspeed}} <span>m/s</span> </span> <!-- windspeed -->
+            <span> Clouds: {{city.weather.clouds}} <span>%</span></span> <!-- clouds -->
         </div>
 
     </span>
     <span class="favoriteButton">
-        <button mat-icon-button class="favorite" (click)="switchFavorite()" [ngStyle]="getButtonStyle()"> 
+        <button mat-icon-button class="favorite" (click)="switchFavorite()" [ngStyle]="getButtonStyle()">
           <mat-icon class="material-icons" id="heartIcon">favorite</mat-icon>   
         </button>
     </span>

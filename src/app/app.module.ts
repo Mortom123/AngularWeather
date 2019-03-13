@@ -7,11 +7,11 @@ import { ControlComponent } from './control/control.component';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { SearchComponent } from './search/search.component';
+import { SearchComponent, SnackBarComponent } from './search/search.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MaterialModule} from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ControlComponent,
     SearchComponent,
     FavoritesComponent,
+    SnackBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +36,6 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

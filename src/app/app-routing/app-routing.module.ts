@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FavoritesComponent } from '../favorites/favorites.component';
-import { SearchComponent } from '../search/search.component';
+import { SearchComponent, SnackBarComponent } from '../search/search.component';
+
 
 
 const routes: Routes = [
-     {path: '', redirectTo: '/favorites', pathMatch: 'full' }, // Start
+     {path: '', redirectTo: '/search', pathMatch: 'full' }, // Start
      {path: 'favorites', component: FavoritesComponent },
-     {path: 'search', component: SearchComponent },
+     {path: 'search', component: SearchComponent  },
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CityWeatherService } from '../services/city-weather.service';
 import { City } from '../classes/city';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { City } from '../classes/city';
 })
 export class FavoritesComponent implements OnInit {
 
-    cities: City[];
+    cities: Observable<City[]>;
     constructor(private cityWeatherService: CityWeatherService) { }
 
     ngOnInit() {
@@ -20,8 +21,7 @@ export class FavoritesComponent implements OnInit {
 
 
     getFavorites(): void {
-        this.cityWeatherService.getFavorites()
-            .subscribe(cities => this.cities = cities);
+      this.cities = this.cityWeatherService.getFavorites();
     }
 
 }

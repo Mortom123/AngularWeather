@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { City } from '../classes/city';
+import { CityWeatherService } from '../services/city-weather.service';
 
 
 
@@ -11,21 +12,27 @@ import { City } from '../classes/city';
 export class CityComponent implements OnInit {
 
   @Input() city: City;
-  constructor() { }
+  constructor(private cityWeatherService: CityWeatherService) { }
 
   ngOnInit() {
   }
 
   getStyles() {
       const cityStyle =  {
-          'background-image': 'url(\'assets/images/' + this.city.weather.iconid + '.jpg\')'
+          'background-image': 'url(\'assets/images/' + this.city.weather.background + '.png\')'
           };
       return cityStyle;
   }
 
   getButtonStyle() {
       let buttonStyle;
-      if (this.city.favorite) {
+
+      let isFavorite;
+
+      isFavorite = this.cityWeatherService.isFavorite(this.city);
+
+
+      if (this.city === null || isFavorite) {
         buttonStyle = {
             'color' : 'red'
         };
@@ -37,8 +44,12 @@ export class CityComponent implements OnInit {
       return buttonStyle;
   }
 
+  getIcon() {
+      return 'http://openweathermap.org/img/w/' + this.city.weather.iconid + '.png';
+  }
+
   switchFavorite(): void {
-      this.city.switchFavorite();
+      this.cityWeatherService.switchFavorite(this.city);
   }
 
 }
