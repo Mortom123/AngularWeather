@@ -85,9 +85,15 @@ export class CityWeatherService {
     }
 
     isFavorite(city: City): boolean {
-        let favorites: StoredData;
+        if (city === null) {
+            return false
+        }
+        let favorites;
         favorites = this.getStoredFavorites();
-        return (favorites.cities.find(x => x.id === city.id)) ?
+        if (favorites === null || favorites.cities === null) {
+            return false
+        }
+        return (favorites.cities.find( (x:City) => x.id === city.id)) ?
             true : false;
     }
 

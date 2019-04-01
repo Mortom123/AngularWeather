@@ -12,7 +12,8 @@ import { CityWeatherService } from '../services/city-weather.service';
 export class CityComponent implements OnInit {
 
   @Input() city: City;
-  constructor(private cityWeatherService: CityWeatherService) { }
+  constructor(private cityWeatherService: CityWeatherService) { 
+  }
 
   ngOnInit() {
   }
@@ -28,11 +29,10 @@ export class CityComponent implements OnInit {
       let buttonStyle;
 
       let isFavorite;
-
-      isFavorite = this.cityWeatherService.isFavorite(this.city);
-
-
-      if (this.city === null || isFavorite) {
+      isFavorite  = this.cityWeatherService.isFavorite(this.city)
+      console.log(isFavorite)
+      
+      if (isFavorite) {
         buttonStyle = {
             'color' : 'red'
         };
