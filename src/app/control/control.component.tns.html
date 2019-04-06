@@ -1,8 +1,8 @@
-<StackLayout>
-  <Label text="control works" textWrap="true"></Label>
-  <Label text="This is a migrated component" textWrap="true"></Label>
-  <Label text="Update it to provide the UI elements required in your mobile app" textWrap="true"></Label>
-</StackLayout>
+<ActionBar title="Weather" class="action-bar">
+  <ActionItem class="menu_btn" [nsRouterLink]="['/search']" pageTransition="slide" android.systemIcon="ic_menu_search"></ActionItem>
+  <ActionItem class="menu_btn" [nsRouterLink]="['/favorites']" pageTransition="slide" android.systemIcon="ic_menu_myplaces"></ActionItem>
+</ActionBar>
+
 
 <!--
 Original Web template:

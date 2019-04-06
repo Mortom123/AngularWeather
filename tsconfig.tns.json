@@ -18,6 +18,7 @@
     "**/*.tns.ts",
     "**/*.android.ts",
     "**/*.ios.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "src/app/search-web/*"
   ]
 }
