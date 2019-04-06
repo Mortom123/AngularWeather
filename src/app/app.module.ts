@@ -7,7 +7,7 @@ import { ControlComponent } from './control/control.component';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { SearchComponent} from './search/search.component';
+import { SearchComponent} from './search-web/search.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
