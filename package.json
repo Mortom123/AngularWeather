@@ -2,6 +2,10 @@
   "name": "weather",
   "version": "0.0.0",
   "scripts": {
+    "android": "tns run android --bundle",
+    "ios": "tns run ios --bundle",
+    "mobile": "tns run --bundle",
+    "preview": "tns preview --bundle",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -11,6 +15,10 @@
   },
   "private": true,
   "dependencies": {
+    "nativescript-angular": "~7.2.0",
+    "nativescript-theme-core": "~1.0.4",
+    "reflect-metadata": "~0.1.12",
+    "tns-core-modules": "~5.2.0",
     "@angular/animations": "^7.2.11",
     "@angular/cdk": "^7.3.6",
     "@angular/common": "^7.2.11",
@@ -29,6 +37,8 @@
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
+    "nativescript-dev-webpack": "^0.20.0",
+    "@nativescript/schematics": "~0.4.0",
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/cli": "^7.3.7",
     "@angular/compiler-cli": "^7.2.11",
@@ -49,5 +59,8 @@
     "ts-node": "~8.0.3",
     "tslint": "~5.14.0",
     "typescript": "^3.1.1"
+  },
+  "nativescript": {
+    "id": "org.nativescript.ngsample"
   }
 }

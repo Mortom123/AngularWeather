@@ -1,19 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { FavoritesComponent } from '../favorites/favorites.component';
-import { SearchComponent } from '../search-web/search.component';
+import { RouterModule} from '@angular/router';
+import { WEBROUTES as ROUTES} from './app.routes'
 
-
-
-const routes: Routes = [
-     {path: '', redirectTo: '/search', pathMatch: 'full' }, // Start
-     {path: 'favorites', component: FavoritesComponent },
-     {path: 'search', component: SearchComponent  },
-];
 
 @NgModule({
     exports: [ RouterModule ],
-    imports: [ RouterModule.forRoot(routes) ]
+    imports: [ RouterModule.forRoot(ROUTES) ]
 })
 
 export class AppRoutingModule { }

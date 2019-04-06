@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "Weather"
+  "defaultProject": "Weather",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  }
 }
