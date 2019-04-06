@@ -10,11 +10,19 @@ import { AppComponent } from './app.component';
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
- import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
+import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
+import { CityComponent } from './city/city.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { ControlComponent } from './control/control.component';
+import { SearchComponent } from './search-mobile/search.component.tns'
 
 @NgModule({
   declarations: [
     AppComponent,
+    CityComponent,
+    FavoritesComponent,
+    ControlComponent,
+    SearchComponent
   ],
   imports: [
     NativeScriptModule,

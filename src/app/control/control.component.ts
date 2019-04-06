@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./control.component.css']
 })
 export class ControlComponent implements OnInit {
-
-    date: Date;
+  date: Date;
+  
   constructor() { }
 
   ngOnInit() {
