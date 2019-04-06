@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
-// import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
+
 import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
 import { CityComponent } from './city/city.component';
 import { FavoritesComponent } from './favorites/favorites.component';
@@ -27,7 +28,8 @@ import { SearchComponent } from './search-mobile/search.component.tns'
   imports: [
     NativeScriptModule,
     AppRoutingModule,
-    NativeScriptHttpClientModule
+    NativeScriptHttpClientModule,
+    NativeScriptFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
