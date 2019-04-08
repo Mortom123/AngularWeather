@@ -5,15 +5,16 @@ import { SearchComponent as MobSearchComponent } from '../search-mobile/search.c
 
 const ROUTES: Routes = [
 {path: '', redirectTo: '/search', pathMatch: 'full' }, // Start
-{path: 'favorites', component: FavoritesComponent },
 ]
 
 export const WEBROUTES: Routes = [
     ...ROUTES,
+    {path: 'favorites', component: FavoritesComponent},
     {path: 'search', component: WebSearchComponent },
 ]
 
 export const MOBROUTES: Routes = [
     ...ROUTES,
-    {path: 'search', component: MobSearchComponent },
+    {path: 'favorites', component: FavoritesComponent, outlet:"favorites" },
+    {path: 'search', component: MobSearchComponent, outlet:"search" },
 ]

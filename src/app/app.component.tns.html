@@ -1,3 +1,7 @@
 <!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
-<app-control></app-control>
-<page-router-outlet></page-router-outlet>
+<ActionBar title="Weather" class="action-bar"></ActionBar>
+<TabView androidTabsPosition="top" selectedIndex="0">
+    <page-router-outlet *tabItem="{title: 'Search'}" name="search"></page-router-outlet>
+    <page-router-outlet *tabItem="{title: 'Favorites'}" name="favorites"></page-router-outlet>
+</TabView>
+
